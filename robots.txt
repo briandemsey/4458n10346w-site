@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://4458n10346w.com/sitemap.xml
