@@ -1,627 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>44°58′N 103°46′W | The Geographic Center of the United States</title>
-    <meta name="description" content="44°58′N 103°46′W: the geographic center of all fifty United States, on the open prairie north of Belle Fourche, South Dakota. History, the numbers, and how to visit.">
-    <meta name="author" content="Brian Demsey">
-    <meta property="og:title" content="44°58′N 103°46′W: The Center of the Nation">
-    <meta property="og:description" content="The geographic center of all fifty states, north of Belle Fourche, South Dakota.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://4458n10346w.com">
-    <link rel="canonical" href="https://4458n10346w.com" />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: #2c2c2c;
-            background: #faf9f7;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        section { scroll-margin-top: 70px; }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>44°58′N 103°46′W — The Geographic Center of the United States</title>
+  <meta name="description" content="44°58′N 103°46′W: the geographic center of all fifty United States, on the open prairie north of Belle Fourche, South Dakota. The numbers, the history, and how to visit.">
+  <meta name="author" content="Brian Demsey">
+  <link rel="canonical" href="https://4458n10346w.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-        /* Header */
-        header {
-            background: rgba(45, 52, 54, 0.95);
-            padding: 16px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            color: #fff;
-            font-size: 1.4rem;
-            font-weight: 600;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-        nav {
-            display: flex;
-            gap: 32px;
-        }
-        nav a {
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-        nav a:hover {
-            color: #fff;
-        }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="44°58′N 103°46′W">
+  <meta property="og:title" content="44°58′N 103°46′W — The Center of the Nation">
+  <meta property="og:description" content="The geographic center of all fifty states, on the prairie north of Belle Fourche, South Dakota.">
+  <meta property="og:url" content="https://4458n10346w.com/">
+  <meta property="og:image" content="https://4458n10346w.com/photos/hero-aerial.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
 
-        /* Hero - prairie sky with compass rose */
-        .hero {
-            background:
-                linear-gradient(180deg, #8fb3c9 0%, #c9d9df 45%, #e8dcc0 62%, #c9a66b 63%, #a8864f 100%);
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding-top: 60px;
-            overflow: hidden;
-        }
-        .hero-rose {
-            position: absolute;
-            right: 6%;
-            top: 50%;
-            transform: translateY(-46%);
-            width: min(520px, 48vw);
-            opacity: 0.9;
-        }
-        .hero-content {
-            padding: 60px;
-            max-width: 540px;
-            background: rgba(255, 255, 255, 0.85);
-            margin: 40px;
-            position: relative;
-        }
-        .hero .tagline {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: #5a4a3a;
-            margin-bottom: 20px;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 400;
-            color: #2c2c2c;
-            line-height: 1.2;
-            margin-bottom: 30px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: #c9a99a;
-            color: #2c2c2c;
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-        .btn:hover {
-            background: #b8917f;
-        }
-
-        /* Narrative Section - Text left, Image right */
-        .narrative-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-        .narrative-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .narrative-text h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 24px;
-        }
-        .narrative-text p {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 24px;
-            line-height: 1.9;
-        }
-        .narrative-image svg {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Card Sections (numbers, history, nearby) */
-        .articles-section {
-            padding: 60px 0;
-            background: #f5f3f0;
-        }
-        .articles-section.alt { background: #fff; }
-        .articles-section h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            color: #2c2c2c;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .articles-section .section-intro {
-            text-align: center;
-            color: #666;
-            margin: 0 auto 40px;
-            font-size: 1.1rem;
-            max-width: 760px;
-        }
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        .articles-grid.four { grid-template-columns: repeat(4, 1fr); }
-        .article-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-        }
-        .articles-section.alt .article-card { background: #faf9f7; }
-        .article-card .big {
-            font-size: 2.6rem;
-            color: #8b7355;
-            line-height: 1.1;
-            margin-bottom: 8px;
-        }
-        .article-card .year {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #8b7355;
-            margin-bottom: 6px;
-        }
-        .article-card h3 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #2c2c2c;
-            margin-bottom: 12px;
-        }
-        .article-card p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .article-card a {
-            color: #8b7355;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .article-card a:hover {
-            text-decoration: underline;
-        }
-
-        /* Visit Section */
-        .book-section { padding: 70px 0; background: #fff; }
-        .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1060px; margin: 0 auto; }
-        .visit-grid .book-label { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #8b7355; margin-bottom: 10px; }
-        .visit-grid h2 { font-size: 2rem; font-weight: 400; color: #2c2c2c; line-height: 1.2; margin-bottom: 8px; }
-        .visit-grid .subtitle { font-style: italic; color: #5a4a3a; margin-bottom: 18px; }
-        .visit-grid p { font-size: 1.05rem; margin-bottom: 16px; }
-        .visit-grid ul { list-style: none; margin-bottom: 18px; }
-        .visit-grid li { padding: 8px 0; border-bottom: 1px solid #eee; }
-        .visit-grid li strong { color: #5a4a3a; }
-        .note {
-            background: #f5f3f0;
-            border-left: 3px solid #c9a99a;
-            padding: 14px 18px;
-            font-size: 0.98rem;
-            color: #555;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            padding: 60px 0;
-            background: #f5f3f0;
-        }
-        .gallery-section h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            color: #c9a99a;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .gallery-placeholder {
-            background: #f0ebe6;
-            border: 1px dashed #d8cfc6;
-            padding: 100px 40px;
-            text-align: center;
-            color: #888;
-            font-style: italic;
-            border-radius: 8px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 60px 0;
-            background: #faf9f7;
-        }
-        .contact-section h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 30px;
-            color: #2c2c2c;
-        }
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-        .contact-info p {
-            color: #555;
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-        .contact-info a {
-            color: #8b7355;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 16px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        .contact-form textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        .contact-form button {
-            background: #c9a99a;
-            color: #2c2c2c;
-            padding: 14px 32px;
-            border: none;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        .contact-form button:hover {
-            background: #b8917f;
-        }
-        .contact-form button:disabled {
-            opacity: 0.6;
-            cursor: default;
-        }
-        .contact-form .botcheck {
-            display: none;
-        }
-        .contact-form .form-status {
-            margin-top: 16px;
-            font-size: 1rem;
-        }
-        .contact-form .form-status.ok {
-            color: #2e6b4f;
-        }
-        .contact-form .form-status.err {
-            color: #a33a2b;
-        }
-
-        /* Footer */
-        footer {
-            background: #2d3436;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        footer p {
-            color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
-        }
-        footer a { color: rgba(255,255,255,0.8); }
-
-        /* Responsive */
-        @media (max-width: 1000px) {
-            .articles-grid.four { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .hero { min-height: 70vh; align-items: flex-end; }
-            .hero-rose { width: 70vw; right: 50%; top: 34%; transform: translate(50%, -50%); opacity: 0.55; }
-            .hero h1 { font-size: 2.2rem; margin-bottom: 20px; }
-            .hero-content { padding: 28px 24px; margin: 16px; }
-            .hero .tagline { font-size: 1rem; margin-bottom: 12px; }
-            .narrative-content,
-            .contact-content,
-            .visit-grid,
-            .articles-grid,
-            .articles-grid.four { grid-template-columns: 1fr; }
-            .narrative-image { order: -1; max-width: 420px; margin: 0 auto; }
-            nav { display: none; }
-            .logo { font-size: 1.15rem; }
-        }
-    </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="view-hero">
 
-<!-- Header -->
-<header>
-    <div class="container">
-        <a href="#" class="logo">44°58′N 103°46′W</a>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#numbers">The Numbers</a>
-            <a href="#history">History</a>
-            <a href="#visit">Visit</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </nav>
+  <!-- ===================== VIEW: HERO ===================== -->
+  <section class="view hero" data-view="hero">
+    <!-- Temporary aerial imagery; replace photos/hero-aerial.jpg with the drone shot -->
+    <img src="photos/hero-aerial.jpg" alt="Aerial view of open prairie at the geographic center of the United States, north of Belle Fourche, South Dakota">
+    <div class="hero-mark" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">The Center of the Nation</div>
+      <h1 class="wordmark">44°58′ N &nbsp;103°46′ W</h1>
+      <div class="wordmark-sub">Butte County &nbsp;·&nbsp; South Dakota</div>
+      <a href="#contents" class="hero-enter" data-nav="contents">Enter</a>
     </div>
-</header>
+    <div class="hero-credit">Imagery: Esri, Maxar, Earthstar Geographics</div>
+  </section>
 
-<!-- Hero -->
-<section class="hero">
-    <svg class="hero-rose" viewBox="0 0 200 200" aria-hidden="true">
-        <g fill="none" stroke="#5a4a3a" stroke-opacity="0.35">
-            <circle cx="100" cy="100" r="92" stroke-width="1.5"/>
-            <circle cx="100" cy="100" r="70" stroke-width="1"/>
-        </g>
-        <g fill="#5a4a3a" fill-opacity="0.22">
-            <polygon points="100,22 112,100 100,178 88,100"/>
-            <polygon points="22,100 100,88 178,100 100,112"/>
-        </g>
-        <g fill="#5a4a3a" fill-opacity="0.12">
-            <polygon points="45,45 104,96 155,155 96,104"/>
-            <polygon points="155,45 104,104 45,155 96,96"/>
-        </g>
-        <circle cx="100" cy="100" r="5" fill="#a33a2b"/>
-        <g font-family="Georgia, serif" font-size="12" fill="#5a4a3a" fill-opacity="0.7" text-anchor="middle">
-            <text x="100" y="16">N</text>
-            <text x="100" y="194">S</text>
-            <text x="190" y="104">E</text>
-            <text x="10" y="104">W</text>
-        </g>
-    </svg>
-    <div class="hero-content">
-        <p class="tagline">Where the fifty states balance</p>
-        <h1>The Center of the Nation</h1>
-        <a href="#narrative" class="btn">Find the Center</a>
+  <!-- ===================== VIEW: TABLE OF CONTENTS ===================== -->
+  <section class="view toc-view" data-view="contents">
+    <div class="toc-wrap">
+      <div class="toc-brand">
+        <div class="toc-brand-line">44°58′ N &nbsp;103°46′ W</div>
+        <div class="toc-brand-sub">The Geographic Center of the United States</div>
+      </div>
+      <div class="toc-eyebrow">Contents</div>
+      <ol class="toc-list">
+        <li>
+          <a href="#center" data-nav="center">
+            <span class="toc-num">I</span>
+            <span class="toc-title">The Center</span>
+            <span class="toc-hint">An overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="#numbers" data-nav="numbers">
+            <span class="toc-num">II</span>
+            <span class="toc-title">The Numbers</span>
+            <span class="toc-hint">Reading 4458N 10346W</span>
+          </a>
+        </li>
+        <li>
+          <a href="#history" data-nav="history">
+            <span class="toc-num">III</span>
+            <span class="toc-title">History</span>
+            <span class="toc-hint">How the center moved</span>
+          </a>
+        </li>
+        <li>
+          <a href="#monument" data-nav="monument">
+            <span class="toc-num">IV</span>
+            <span class="toc-title">The Monument</span>
+            <span class="toc-hint">Belle Fourche</span>
+          </a>
+        </li>
+        <li>
+          <a href="#marker" data-nav="marker">
+            <span class="toc-num">V</span>
+            <span class="toc-title">The Marker</span>
+            <span class="toc-hint">The actual point</span>
+          </a>
+        </li>
+        <li>
+          <a href="#directions" data-nav="directions">
+            <span class="toc-num">VI</span>
+            <span class="toc-title">Directions</span>
+            <span class="toc-hint">Finding the center</span>
+          </a>
+        </li>
+        <li>
+          <a href="#region" data-nav="region">
+            <span class="toc-num">VII</span>
+            <span class="toc-title">The Region</span>
+            <span class="toc-hint">The Northern Black Hills</span>
+          </a>
+        </li>
+        <li>
+          <a href="#photography" data-nav="photography">
+            <span class="toc-num">VIII</span>
+            <span class="toc-title">Photography</span>
+            <span class="toc-hint">From the air</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" data-nav="contact">
+            <span class="toc-num">IX</span>
+            <span class="toc-title">Contact</span>
+            <span class="toc-hint">Stories, corrections, questions</span>
+          </a>
+        </li>
+      </ol>
+      <div class="toc-footer">
+        <div>Presented by Brian Demsey &mdash; Spearfish, South Dakota &nbsp;·&nbsp; <a href="https://demsey.com">demsey.com</a></div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Narrative / Introduction -->
-<section class="narrative-section" id="narrative">
-    <div class="container">
-        <div class="narrative-content">
-            <div class="narrative-text">
-                <h2>A spot on the prairie</h2>
-                <p>Drive north out of Belle Fourche, South Dakota, and the Black Hills fall away behind you into open grassland. About twenty miles up the road, in a cattle pasture in Butte County, lies the geographic center of the United States: <strong>44°58′N, 103°46′W</strong>.</p>
-                <p>That is what this website's name spells out. Four digits of latitude, an N, five digits of longitude, a W. Fifty states, from Maine to Hawaii and Alaska, all balance on this one point.</p>
-                <p>There is no town here, no gift shop, and usually nobody at all. Just a survey marker, a flag, wind, and grass in every direction. This site tells the story of how a quiet pasture became the middle of America, and how you can go see it.</p>
-            </div>
-            <div class="narrative-image">
-                <svg viewBox="0 0 400 300" role="img" aria-labelledby="coordTitle">
-                    <title id="coordTitle">Diagram showing latitude 44 degrees 58 minutes north crossing longitude 103 degrees 46 minutes west</title>
-                    <rect width="400" height="300" rx="6" fill="#f5f3f0"/>
-                    <g stroke="#d8cfc6" stroke-width="1">
-                        <line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="240" x2="400" y2="240"/>
-                        <line x1="80" y1="0" x2="80" y2="300"/><line x1="320" y1="0" x2="320" y2="300"/>
-                    </g>
-                    <line x1="0" y1="150" x2="400" y2="150" stroke="#8b7355" stroke-width="2"/>
-                    <line x1="200" y1="0" x2="200" y2="300" stroke="#8b7355" stroke-width="2"/>
-                    <circle cx="200" cy="150" r="22" fill="none" stroke="#a33a2b" stroke-width="1.5"/>
-                    <circle cx="200" cy="150" r="7" fill="#a33a2b"/>
-                    <g font-family="Georgia, serif" fill="#5a4a3a">
-                        <text x="390" y="140" font-size="18" text-anchor="end">44°58′ N</text>
-                        <text x="210" y="290" font-size="18">103°46′ W</text>
-                        <text x="12" y="28" font-size="13" fill-opacity="0.7">latitude: north of the equator</text>
-                        <text x="12" y="46" font-size="13" fill-opacity="0.7">longitude: west of Greenwich</text>
-                    </g>
-                </svg>
-            </div>
+  <!-- ===================== VIEW: I · THE CENTER ===================== -->
+  <section class="view section" data-view="center">
+    <div class="reading">
+      <div class="eyebrow">I &nbsp;·&nbsp; The Center</div>
+      <h2>A point on the prairie.</h2>
+      <p class="opening">
+        About twenty miles north of Belle Fourche, South Dakota, in a cattle pasture in Butte County, lies the geographic center of the United States &mdash; all fifty states, from Maine to Hawaii and Alaska.
+      </p>
+      <p>
+        Its coordinates are 44°58′ north, 103°46′ west. Written without the symbols, they become the name of this site: 4458N 10346W.
+      </p>
+      <p>
+        There is no town at the center, no gift shop, and most days nobody at all. There is a survey marker, a flag, and grass and sky in every direction. The pages that follow explain what the numbers mean, how a quiet pasture came to be the middle of America, and how to go and stand there.
+      </p>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: II · THE NUMBERS ===================== -->
+  <section class="view section section-alt" data-view="numbers">
+    <div class="reading">
+      <div class="eyebrow">II &nbsp;·&nbsp; The Numbers</div>
+      <h2>Reading 4458N 10346W.</h2>
+      <p>
+        Every place on Earth can be named by two angles: how far north or south of the equator it lies, and how far east or west of the Prime Meridian at Greenwich, England. Each degree is divided into sixty minutes.
+      </p>
+      <ul class="figures">
+        <li>
+          <span class="fig">44°</span>
+          <span class="fig-text"><strong>Degrees north.</strong> Forty-four degrees above the equator, a little past halfway to the North Pole.</span>
+        </li>
+        <li>
+          <span class="fig">58′</span>
+          <span class="fig-text"><strong>Minutes north.</strong> A minute of latitude is about 1.15 miles, so the center sits near the top of the 44th degree.</span>
+        </li>
+        <li>
+          <span class="fig">103°</span>
+          <span class="fig-text"><strong>Degrees west.</strong> One hundred three degrees west of Greenwich, inside the Mountain Time Zone.</span>
+        </li>
+        <li>
+          <span class="fig">46′</span>
+          <span class="fig-text"><strong>Minutes west.</strong> At this latitude a minute of longitude is only about 0.8 miles, because the meridians draw together as they run north.</span>
+        </li>
+      </ul>
+      <p class="fine-print">
+        A "geographic center" is the point on which a flat map of the country would balance if it were cut from a sheet of uniform thickness. The National Geodetic Survey notes that there is no single agreed definition, and the result depends on how the shape is drawn. The figure here is the one announced by the U.S. Coast and Geodetic Survey in 1959.
+      </p>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: III · HISTORY ===================== -->
+  <section class="view section" data-view="history">
+    <div class="reading">
+      <div class="eyebrow">III &nbsp;·&nbsp; History</div>
+      <h2>How the center moved.</h2>
+      <p>
+        The center of a country is not fixed. When the country changes shape, the balance point moves with it.
+      </p>
+      <ol class="timeline">
+        <li>
+          <span class="when">1918</span>
+          <span class="what"><strong>Forty-eight states: Kansas.</strong> The Coast and Geodetic Survey balanced a cardboard cutout of the contiguous states on a pin. It balanced near Lebanon, Kansas, where a stone monument still marks the spot.</span>
+        </li>
+        <li>
+          <span class="when">1959</span>
+          <span class="what"><strong>Fifty states: South Dakota.</strong> With the admission of Alaska and Hawaii, the balance point moved hundreds of miles north and west, to the prairie north of Belle Fourche, at 44°58′N 103°46′W.</span>
+        </li>
+        <li>
+          <span class="when">1962</span>
+          <span class="what"><strong>The point is marked.</strong> A reference mark and benchmark were set at the actual center, on private ranch land, where they remain today.</span>
+        </li>
+        <li>
+          <span class="when">2007</span>
+          <span class="what"><strong>A monument in town.</strong> Belle Fourche unveiled a granite compass rose, ringed by state flags, beside the Tri-State Museum, giving visitors an easy place to stand at the center of the nation.</span>
+        </li>
+      </ol>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: IV · THE MONUMENT ===================== -->
+  <section class="view section section-alt" data-view="monument">
+    <div class="reading">
+      <div class="eyebrow">IV &nbsp;·&nbsp; The Monument</div>
+      <h2>Center of the Nation Monument, Belle Fourche.</h2>
+      <p>
+        Because the true center lies in a working pasture, Belle Fourche built its monument in town. A 21-foot compass rose of South Dakota granite, encircled by the flags of the fifty states, sits beside the Tri-State Museum &amp; Center of the Nation Visitor Center.
+      </p>
+      <p>
+        It is the place most travelers come to stand at the middle of the country &mdash; easy to reach, open year-round, and a short drive from Spearfish and Interstate 90.
+      </p>
+      <div class="panel">
+        <div class="panel-eyebrow">Visiting</div>
+        <dl>
+          <dt>Address</dt>
+          <dd>415 Fifth Avenue, Belle Fourche, SD 57717</dd>
+          <dt>Monument</dt>
+          <dd>Outdoors, open year-round</dd>
+          <dt>Museum &amp; visitor center</dt>
+          <dd>Free admission; hours change between summer and winter</dd>
+          <dt>Telephone</dt>
+          <dd>605-723-1200 &mdash; call ahead to confirm hours</dd>
+        </dl>
+      </div>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: V · THE MARKER ===================== -->
+  <section class="view section" data-view="marker">
+    <div class="reading">
+      <div class="eyebrow">V &nbsp;·&nbsp; The Marker</div>
+      <h2>The actual point.</h2>
+      <p class="opening">
+        The true center lies about twenty miles north of Belle Fourche, in open rangeland in Butte County.
+      </p>
+      <p>
+        A flag flies over the site, and survey markers are set into the ground beneath it. Around them is nothing but shortgrass prairie, sagebrush, and the long horizon of western South Dakota.
+      </p>
+      <p>
+        The land is private and grazed by cattle. The owners have chosen to leave it as it is, which is part of its appeal: the center of the nation looks very much as it did when it was first measured.
+      </p>
+      <div class="advisory">
+        <div class="advisory-head">A note on private land</div>
+        <p>The marker stands on a working ranch. Visitors have long been tolerated, but please treat it as someone's home: close any gate you open, keep clear of livestock, and leave nothing behind.</p>
+      </div>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: VI · DIRECTIONS ===================== -->
+  <section class="view section section-alt" data-view="directions">
+    <div class="reading">
+      <div class="eyebrow">VI &nbsp;·&nbsp; Directions</div>
+      <h2>Finding the center.</h2>
+      <ol class="route">
+        <li>From Interstate 90, take exit 10 at Spearfish and drive north on US 85 about ten miles to Belle Fourche.</li>
+        <li>In Belle Fourche, visit the monument at 415 Fifth Avenue, two blocks north of the railroad tracks.</li>
+        <li>For the actual point, continue north out of town into Butte County, about twenty miles, and follow the ranch road out to the marked site.</li>
+        <li>The last stretch is gravel and then on foot across open pasture. Expect wind, cactus, and cattle.</li>
+      </ol>
+      <p><a class="map-link" href="https://www.google.com/maps?q=44.96724,-103.77156" target="_blank" rel="noopener">Open the point in Google Maps &rarr;</a></p>
+      <div class="advisory">
+        <div class="advisory-head">Before you go</div>
+        <p>There are no services beyond Belle Fourche. Bring water, sturdy shoes, and a full tank. After rain, gravel roads can be difficult. The visitor center can confirm current conditions.</p>
+      </div>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: VII · THE REGION ===================== -->
+  <section class="view section" data-view="region">
+    <div class="reading">
+      <div class="eyebrow">VII &nbsp;·&nbsp; The Region</div>
+      <h2>The Northern Black Hills.</h2>
+      <p>
+        The center sits where the Great Plains meet the northern edge of the Black Hills, one of the great road-trip regions of the country.
+      </p>
+      <h3>Spearfish and Spearfish Canyon</h3>
+      <p>A short drive south of Belle Fourche. The canyon's scenic byway winds past limestone walls and waterfalls into the hills.</p>
+      <h3>Devils Tower</h3>
+      <p>America's first national monument rises from the plains just across the Wyoming line, an easy day trip from the center.</p>
+      <h3>Deadwood and Sturgis</h3>
+      <p>The Gold Rush town of Wild Bill Hickok and Calamity Jane, and the home of the summer motorcycle rally.</p>
+      <h3>Mount Rushmore</h3>
+      <p>In the heart of the Black Hills, south of Rapid City, about two hours from the center.</p>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: VIII · PHOTOGRAPHY ===================== -->
+  <section class="view section section-alt" data-view="photography">
+    <div class="reading">
+      <div class="eyebrow">VIII &nbsp;·&nbsp; Photography</div>
+      <h2>From the air.</h2>
+      <p>
+        The view on the opening page looks straight down on the center of the nation. The point itself is at the middle of the frame.
+      </p>
+      <p>
+        Drone photography of the marker and the surrounding prairie is coming soon.
+      </p>
+      <figure class="photo-wide">
+        <img src="photos/hero-aerial.jpg" alt="Satellite view of the prairie surrounding the geographic center of the United States" loading="lazy">
+        <figcaption>Satellite view centered on 44°58′N 103°46′W. Imagery: Esri, Maxar, Earthstar Geographics.</figcaption>
+      </figure>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW: IX · CONTACT ===================== -->
+  <section class="view section" data-view="contact">
+    <div class="reading">
+      <div class="eyebrow">IX &nbsp;·&nbsp; Contact</div>
+      <h2>Been to the center?</h2>
+      <p>
+        Share a story, a photograph, a correction, or a question. Messages come to Brian Demsey in Spearfish, about an hour from the center.
+      </p>
+      <form class="inquire-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="094b4d7e-981d-46a7-bbdc-254071bdde27">
+        <input type="hidden" name="subject" value="4458n10346w.com - message">
+        <input type="hidden" name="from_name" value="4458n10346w.com">
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+        <div class="row">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- The Numbers -->
-<section class="articles-section" id="numbers">
-    <div class="container">
-        <h2>Reading the Numbers</h2>
-        <p class="section-intro">4458n10346w is a map reference written as a web address. Here is how to decode it.</p>
-        <div class="articles-grid four">
-            <div class="article-card">
-                <div class="big">44°</div>
-                <h3>Degrees north</h3>
-                <p>Forty-four degrees above the equator. That's a little north of halfway between the equator and the North Pole.</p>
-            </div>
-            <div class="article-card">
-                <div class="big">58′</div>
-                <h3>Minutes north</h3>
-                <p>Each degree is split into 60 minutes. A minute of latitude is about 1.15 miles, so 58′ puts the point near the top of the 44th degree.</p>
-            </div>
-            <div class="article-card">
-                <div class="big">103°</div>
-                <h3>Degrees west</h3>
-                <p>One hundred three degrees west of the Prime Meridian in Greenwich, England, which puts it in the Mountain Time Zone.</p>
-            </div>
-            <div class="article-card">
-                <div class="big">46′</div>
-                <h3>Minutes west</h3>
-                <p>At this latitude a minute of longitude is only about 0.8 miles, because meridians draw closer together as you go north.</p>
-            </div>
+        <div class="field">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" required></textarea>
         </div>
+        <button type="submit" class="submit">Send</button>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+      <nav class="back-to-toc"><a href="#contents" data-nav="contents">Return to Contents</a></nav>
+      <div class="section-footer">&copy; 2026 Brian Demsey</div>
     </div>
-</section>
+  </section>
 
-<!-- History -->
-<section class="articles-section alt" id="history">
-    <div class="container">
-        <h2>How the Center Moved</h2>
-        <p class="section-intro">The center of the country is not fixed. It moves when the country changes shape.</p>
-        <div class="articles-grid">
-            <div class="article-card">
-                <div class="year">1918</div>
-                <h3>The middle of 48 states: Kansas</h3>
-                <p>The U.S. Coast and Geodetic Survey found the center of the 48 contiguous states by balancing a cardboard cutout of the map on a pin. It balanced near Lebanon, Kansas, where a monument still stands.</p>
-            </div>
-            <div class="article-card">
-                <div class="year">1959</div>
-                <h3>Alaska and Hawaii pull it north and west</h3>
-                <p>When Alaska and Hawaii became states in 1959, the balance point jumped hundreds of miles to the northwest. The Coast and Geodetic Survey placed the new center north of Belle Fourche, South Dakota, at 44°58′N, 103°46′W.</p>
-            </div>
-            <div class="article-card">
-                <div class="year">1962</div>
-                <h3>Marking the exact spot</h3>
-                <p>Survey markers were set at the actual site in a private pasture. A flag flies over them today. Because the land is a working ranch, the town of Belle Fourche built its public monument closer to home.</p>
-            </div>
-            <div class="article-card">
-                <div class="year">2007</div>
-                <h3>The Center of the Nation Monument</h3>
-                <p>Belle Fourche unveiled a 21-foot granite compass rose, ringed by state flags, outside the Tri-State Museum. It's the place most visitors go to stand at the "center."</p>
-            </div>
-        </div>
-    </div>
-</section>
+  <script>
+    // View routing: one section visible at a time, driven by the URL hash
+    (function () {
+      var views = document.querySelectorAll('[data-view]');
+      var VALID = {};
+      views.forEach(function (v) { VALID[v.getAttribute('data-view')] = v; });
 
-<!-- Visit -->
-<section class="book-section" id="visit">
-    <div class="container">
-        <div class="visit-grid">
-            <div>
-                <p class="book-label">In town</p>
-                <h2>Center of the Nation Monument</h2>
-                <p class="subtitle">Belle Fourche, South Dakota</p>
-                <p>The easy way to visit. The granite compass rose sits behind the Tri-State Museum &amp; Center of the Nation Visitor Center, which tells the story of the center and the surrounding tri-state region.</p>
-                <ul>
-                    <li><strong>Address:</strong> 415 Fifth Avenue, Belle Fourche, SD 57717</li>
-                    <li><strong>Getting there:</strong> From I-90 exit 10 at Spearfish, about 10 miles north on US 85</li>
-                    <li><strong>Monument:</strong> Outdoors and open year-round</li>
-                    <li><strong>Museum:</strong> Free admission; hours vary by season</li>
-                </ul>
-                <p class="note">Museum hours change between summer and winter. Call the visitor center at 605-723-1200 before you make the trip.</p>
-            </div>
-            <div>
-                <p class="book-label">On the prairie</p>
-                <h2>The actual center</h2>
-                <p class="subtitle">About 20 miles north of Belle Fourche, Butte County</p>
-                <p>The true point, 44°58′N 103°46′W, is in a pasture off US 85. A flag marks the spot, and survey markers are set into the ground beneath it.</p>
-                <p>Getting there means following a gravel ranch road and walking out across the grass. Expect wind, cactus, and cattle. There are no services, so bring water and good shoes.</p>
-                <p class="note">This is private, working ranch land. Visitors have long been welcome, but please respect the owner's wishes, close any gates behind you, and leave nothing behind.</p>
-            </div>
-        </div>
-    </div>
-</section>
+      function show(name, opts) {
+        opts = opts || {};
+        if (!VALID[name]) name = 'hero';
+        views.forEach(function (v) {
+          v.classList.toggle('active', v.getAttribute('data-view') === name);
+        });
+        document.body.className = 'view-' + name;
+        window.scrollTo(0, 0);
+        if (opts.updateHash !== false) {
+          var newHash = (name === 'hero') ? '' : ('#' + name);
+          if (('#' + name) !== location.hash && !(name === 'hero' && !location.hash)) {
+            history.pushState({ view: name }, '', newHash || location.pathname);
+          }
+        }
+      }
 
-<!-- Nearby -->
-<section class="articles-section" id="nearby">
-    <div class="container">
-        <h2>While You're in the Area</h2>
-        <p class="section-intro">The center sits at the north edge of the Black Hills, one of the best road-trip regions in the country.</p>
-        <div class="articles-grid">
-            <div class="article-card">
-                <h3>Spearfish &amp; Spearfish Canyon</h3>
-                <p>A short drive south of Belle Fourche. The canyon's scenic byway winds past limestone cliffs and waterfalls into the northern Black Hills.</p>
-            </div>
-            <div class="article-card">
-                <h3>Devils Tower</h3>
-                <p>America's first national monument rises out of the plains just across the Wyoming line, an easy day trip from the center.</p>
-            </div>
-            <div class="article-card">
-                <h3>Deadwood &amp; Sturgis</h3>
-                <p>The Gold Rush town of Wild Bill Hickok and Calamity Jane, and the home of the famous summer motorcycle rally.</p>
-            </div>
-            <div class="article-card">
-                <h3>Mount Rushmore</h3>
-                <p>The four presidents are in the heart of the Black Hills, south of Rapid City, about two hours from the center.</p>
-            </div>
-        </div>
-    </div>
-</section>
+      function currentFromHash() {
+        var h = location.hash.replace('#', '');
+        return VALID[h] ? h : 'hero';
+      }
 
-<!-- Gallery -->
-<section class="gallery-section" id="gallery">
-    <div class="container">
-        <h2>Gallery</h2>
-        <div class="gallery-placeholder">Photographs from the monument and the prairie are coming soon.</div>
-    </div>
-</section>
+      document.addEventListener('click', function (ev) {
+        var a = ev.target.closest('[data-nav]');
+        if (!a) return;
+        ev.preventDefault();
+        show(a.getAttribute('data-nav'), { updateHash: true });
+      });
 
-<!-- Contact -->
-<section class="contact-section" id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <p>This site is a labor of love by Brian Demsey of Spearfish, South Dakota, about an hour from the center of the nation.</p>
-                <p><strong>Email:</strong> <a href="mailto:bdemsey@gmail.com">bdemsey@gmail.com</a></p>
-                <p><strong>More from Brian:</strong> <a href="https://demsey.com">demsey.com</a></p>
-            </div>
-            <div class="contact-form">
-                <p><strong>Been to the center?</strong></p>
-                <p style="margin-bottom: 20px; color: #666;">Share your story, a correction, or a question. I'll do my best to get back to you soon!</p>
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="094b4d7e-981d-46a7-bbdc-254071bdde27">
-                    <input type="hidden" name="subject" value="4458n10346w.com - message">
-                    <input type="hidden" name="from_name" value="4458n10346w.com">
-                    <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Message" required></textarea>
-                    <button type="submit">Send</button>
-                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+      window.addEventListener('popstate', function () {
+        show(currentFromHash(), { updateHash: false });
+      });
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>&copy; 2026 Brian Demsey. All rights reserved. &middot; <a href="https://demsey.com">demsey.com</a></p>
-    </div>
-</footer>
+      show(currentFromHash(), { updateHash: false });
+    })();
 
-<script>
-(function () {
-    var form = document.getElementById('contact-form');
-    var status = document.getElementById('form-status');
-    var button = form.querySelector('button[type="submit"]');
-    form.addEventListener('submit', function (e) {
+    // Contact form via Web3Forms
+    (function () {
+      var form = document.getElementById('contact-form');
+      var note = document.getElementById('form-note');
+      var button = form.querySelector('button[type="submit"]');
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
         button.disabled = true;
-        status.className = 'form-status';
-        status.textContent = 'Sending...';
+        note.className = 'form-note';
+        note.textContent = 'Sending...';
         fetch(form.action, {
-            method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: new FormData(form)
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
         }).then(function (r) { return r.json(); }).then(function (data) {
-            if (!data.success) throw new Error(data.message || 'Send failed');
-            form.reset();
-            status.className = 'form-status ok';
-            status.textContent = 'Thank you. Your message was sent.';
+          if (!data.success) throw new Error(data.message || 'Send failed');
+          form.reset();
+          note.className = 'form-note ok';
+          note.textContent = 'Thank you. Your message was sent.';
         }).catch(function () {
-            status.className = 'form-status err';
-            status.textContent = 'Sorry, your message could not be sent. Please email bdemsey@gmail.com.';
+          note.className = 'form-note err';
+          note.textContent = 'Sorry, your message could not be sent. Please email bdemsey@gmail.com.';
         }).then(function () {
-            button.disabled = false;
+          button.disabled = false;
         });
-    });
-})();
-</script>
+      });
+    })();
+  </script>
 
 </body>
 </html>
