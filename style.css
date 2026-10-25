@@ -438,6 +438,7 @@ ol.route li::before {
 .photo-wide { margin: 3rem 0 0 0; }
 .photo-wide img { width: 100%; border: 1px solid var(--line); }
 .photo-cover { max-width: 340px; margin: 2.5rem auto; }
+.photo-collage img { border: 0; }
 .photo-wide figcaption {
   margin-top: 0.85rem;
   font-family: var(--sans);
