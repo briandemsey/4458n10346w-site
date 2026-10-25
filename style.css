@@ -559,3 +559,5 @@ ol.route li::before {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+.subhead-ground { margin-top: 4rem; }
+.subhead-ground + .photo-collage { margin-top: 1.5rem; }
