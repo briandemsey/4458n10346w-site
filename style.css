@@ -561,3 +561,8 @@ ol.route li::before {
 }
 .subhead-ground { margin-top: 4rem; }
 .subhead-ground + .photo-collage { margin-top: 1.5rem; }
+/* Ring over the Photography map, marking 44°58′N 103°46′W at the image center */
+.map-frame { position: relative; }
+.map-frame img { display: block; }
+.map-mark { width: 26px; height: 26px; margin: -13px 0 0 -13px; }
+.map-mark::after { width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px; }
